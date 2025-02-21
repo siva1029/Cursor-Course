@@ -1,12 +1,16 @@
 import './globals.css';
+import { Sidebar } from '@/components/dashboard/Sidebar';
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <main className="min-h-screen bg-gray-50">
-          {children}
-        </main>
+        <div className="flex min-h-screen">
+          <Sidebar />
+          <main className="flex-1 bg-gray-50 ml-0 p-4">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );
